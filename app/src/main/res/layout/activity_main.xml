@@ -9,7 +9,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edt1"/>
+        android:id="@+id/editText"/>
 
 
     <Button
@@ -18,8 +18,7 @@
         android:layout_height="wrap_content"
         android:text="1"
         android:id="@+id/button1"
-        android:layout_marginTop="94dp"
-        android:layout_below="@+id/edt1"
+        android:layout_below="@+id/editText"
         android:layout_toStartOf="@+id/button4"
         android:layout_toLeftOf="@+id/button2"
         android:layout_alignRight="@+id/button4"
@@ -107,35 +106,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+"
-        android:id="@+id/buttonadd"
+        android:id="@+id/buttonAddition"
         android:layout_alignTop="@+id/button3"
         android:layout_toRightOf="@+id/button3"
-        android:layout_marginLeft="46dp"
-        android:layout_marginStart="46dp"
-        android:layout_alignRight="@+id/edt1"
-        android:layout_alignEnd="@+id/edt1" />
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_alignRight="@+id/editText"
+        android:layout_alignEnd="@+id/editText" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="-"
-        android:id="@+id/buttonsub"
-        android:layout_below="@+id/buttonadd"
-        android:layout_alignLeft="@+id/buttonadd"
-        android:layout_alignStart="@+id/buttonadd"
-        android:layout_alignRight="@+id/buttonadd"
-        android:layout_alignEnd="@+id/buttonadd" />
+        android:id="@+id/buttonSubtract"
+        android:layout_below="@+id/buttonAddition"
+        android:layout_alignLeft="@+id/buttonAddition"
+        android:layout_alignStart="@+id/buttonAddition"
+        android:layout_alignRight="@+id/buttonAddition"
+        android:layout_alignEnd="@+id/buttonAddition" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="*"
-        android:id="@+id/buttonmul"
-        android:layout_below="@+id/buttonsub"
-        android:layout_alignLeft="@+id/buttonsub"
-        android:layout_alignStart="@+id/buttonsub"
+        android:id="@+id/buttonMultiply"
+        android:layout_below="@+id/buttonSubtract"
+        android:layout_alignLeft="@+id/buttonSubtract"
+        android:layout_alignStart="@+id/buttonSubtract"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
@@ -173,22 +172,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="/"
-        android:id="@+id/buttondiv"
-        android:layout_below="@+id/buttonmul"
-        android:layout_alignLeft="@+id/buttonmul"
-        android:layout_alignStart="@+id/buttonmul"
-        android:layout_alignRight="@+id/buttonmul"
-        android:layout_alignEnd="@+id/buttonmul" />
+        android:id="@+id/buttonDivision"
+        android:layout_below="@+id/buttonMultiply"
+        android:layout_alignLeft="@+id/buttonMultiply"
+        android:layout_alignStart="@+id/buttonMultiply"
+        android:layout_alignRight="@+id/buttonMultiply"
+        android:layout_alignEnd="@+id/buttonMultiply" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="="
-        android:id="@+id/buttoneql"
+        android:id="@+id/buttonEquals"
         android:layout_below="@+id/button0"
-        android:layout_marginTop="37dp"
-        android:layout_alignRight="@+id/buttondiv"
-        android:layout_alignEnd="@+id/buttondiv"
+        android:layout_alignRight="@+id/buttonDivision"
+        android:layout_alignEnd="@+id/buttonDivision"
         android:layout_alignLeft="@+id/button10"
         android:layout_alignStart="@+id/button10" />
 

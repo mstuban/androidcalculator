@@ -1,6 +1,5 @@
 package com.calculator.mobilne.tvz.hr.calculator;
 
-
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -9,15 +8,15 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button0, button1, button2, button3, button4, button5, button6,
-            button7, button8, button9, buttonAdd, buttonSub, buttonDivision,
-            buttonMul, button10, buttonC, buttonEqual;
+    private Button button0, button1, button2, button3, button4, button5, button6,
+            button7, button8, button9, buttonAddition, buttonSubtract, buttonDivision,
+            buttonMultiply, button10, buttonC, buttonEquals;
 
-    EditText edt1;
+    private EditText editText;
 
-    float mValueOne, mValueTwo;
+    private float mValueOne, mValueTwo;
 
-    boolean mAddition, mSubtract, mMultiplication, mDivision;
+    private boolean mAddition, mSubtract, mMultiplication, mDivision;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,149 +34,149 @@ public class MainActivity extends AppCompatActivity {
         button8 = findViewById(R.id.button8);
         button9 = findViewById(R.id.button9);
         button10 = findViewById(R.id.button10);
-        buttonAdd = findViewById(R.id.buttonadd);
-        buttonSub = findViewById(R.id.buttonsub);
-        buttonMul = findViewById(R.id.buttonmul);
-        buttonDivision = findViewById(R.id.buttondiv);
+        buttonAddition = findViewById(R.id.buttonAddition);
+        buttonSubtract = findViewById(R.id.buttonSubtract);
+        buttonMultiply = findViewById(R.id.buttonMultiply);
+        buttonDivision = findViewById(R.id.buttonDivision);
         buttonC = findViewById(R.id.buttonC);
-        buttonEqual = findViewById(R.id.buttoneql);
-        edt1 = findViewById(R.id.edt1);
+        buttonEquals = findViewById(R.id.buttonEquals);
+        editText = findViewById(R.id.editText);
 
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                edt1.setText(edt1.getText() + "1");
+                editText.setText(editText.getText() + "1");
             }
         });
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                edt1.setText(edt1.getText() + "2");
+                editText.setText(editText.getText() + "2");
             }
         });
 
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                edt1.setText(edt1.getText() + "3");
+                editText.setText(editText.getText() + "3");
             }
         });
 
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                edt1.setText(edt1.getText() + "4");
+                editText.setText(editText.getText() + "4");
             }
         });
 
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                edt1.setText(edt1.getText() + "5");
+                editText.setText(editText.getText() + "5");
             }
         });
 
         button6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                edt1.setText(edt1.getText() + "6");
+                editText.setText(editText.getText() + "6");
             }
         });
 
         button7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                edt1.setText(edt1.getText() + "7");
+                editText.setText(editText.getText() + "7");
             }
         });
 
         button8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                edt1.setText(edt1.getText() + "8");
+                editText.setText(editText.getText() + "8");
             }
         });
 
         button9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                edt1.setText(edt1.getText() + "9");
+                editText.setText(editText.getText() + "9");
             }
         });
 
         button0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                edt1.setText(edt1.getText() + "0");
+                editText.setText(editText.getText() + "0");
             }
         });
 
-        buttonAdd.setOnClickListener(new View.OnClickListener() {
+        buttonAddition.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if (edt1 == null) {
-                    edt1.setText("+");
+                if (editText == null) {
+                    editText.setText("+");
                 } else {
-                    mValueOne = Float.parseFloat(edt1.getText() + "");
+                    mValueOne = Float.parseFloat(editText.getText() + "");
                     mAddition = true;
-                    edt1.setText(null);
+                    editText.setText(null);
                 }
             }
         });
 
-        buttonSub.setOnClickListener(new View.OnClickListener() {
+        buttonSubtract.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = Float.parseFloat(edt1.getText() + "");
+                mValueOne = Float.parseFloat(editText.getText() + "");
                 mSubtract = true;
-                edt1.setText(null);
+                editText.setText(null);
             }
         });
 
-        buttonMul.setOnClickListener(new View.OnClickListener() {
+        buttonMultiply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = Float.parseFloat(edt1.getText() + "");
+                mValueOne = Float.parseFloat(editText.getText() + "");
                 mMultiplication = true;
-                edt1.setText(null);
+                editText.setText(null);
             }
         });
 
         buttonDivision.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = Float.parseFloat(edt1.getText() + "");
+                mValueOne = Float.parseFloat(editText.getText() + "");
                 mDivision = true;
-                edt1.setText(null);
+                editText.setText(null);
             }
         });
 
-        buttonEqual.setOnClickListener(new View.OnClickListener() {
+        buttonEquals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueTwo = Float.parseFloat(edt1.getText() + "");
+                mValueTwo = Float.parseFloat(editText.getText() + "");
 
                 if (mAddition) {
 
-                    edt1.setText(mValueOne + mValueTwo + "");
+                    editText.setText(mValueOne + mValueTwo + "");
                     mAddition = false;
                 }
 
                 if (mSubtract) {
-                    edt1.setText(mValueOne - mValueTwo + "");
+                    editText.setText(mValueOne - mValueTwo + "");
                     mSubtract = false;
                 }
 
                 if (mMultiplication) {
-                    edt1.setText(mValueOne * mValueTwo + "");
+                    editText.setText(mValueOne * mValueTwo + "");
                     mMultiplication = false;
                 }
 
                 if (mDivision) {
-                    edt1.setText(mValueOne / mValueTwo + "");
+                    editText.setText(mValueOne / mValueTwo + "");
                     mDivision = false;
                 }
             }
@@ -186,14 +185,14 @@ public class MainActivity extends AppCompatActivity {
         buttonC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                edt1.setText("");
+                editText.setText("");
             }
         });
 
         button10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                edt1.setText(edt1.getText() + ".");
+                editText.setText(editText.getText() + ".");
             }
         });
     }
